@@ -32,12 +32,12 @@ func main() {
 			deployment = c.Args().Get(0)
 		}
 		kubeCommand := "kubectl patch deployment " + deployment + " -p \"{\\\"spec\\\":{\\\"template\\\":{\\\"metadata\\\":{\\\"labels\\\":{\\\"creationTimestamp\\\":\\\"`date +'%s'`\\\"}}}}}\""
-		fmt.Printf(" executing %s ", kubeCommand)
+		fmt.Printf("\nExecuting: \n%s\n", kubeCommand)
 		out, err := exec.Command("bash", "-c", kubeCommand).Output()
 		if err != nil {
 			log.Fatal(err)
 		}
-		fmt.Printf("The date is:\n%s", out)
+		fmt.Printf("\n%s\n", out)
 		return nil
 	}
 
