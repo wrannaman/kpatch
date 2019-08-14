@@ -15,7 +15,7 @@ kpatch api-deployment
 ## Install 
 
 ```sh
-go get https://github.com/wrannaman/kpatch 
-go install https://github.com/wrannaman/kpatch 
+go get github.com/wrannaman/kpatch 
+go install github.com/wrannaman/kpatch 
 
 ```
